@@ -22,7 +22,7 @@ function getBuildFile($files = array(),$q = 'js'){
 
 
 # CSS
-/*$build_dir = __DIR__."/build/static/css";
+$build_dir = __DIR__."/build/static/css";
 $files = scandir($build_dir);
 $build_file = "/build/static/css/" .getBuildFile($files, 'css');
 
@@ -30,7 +30,7 @@ $build_file = "/build/static/css/" .getBuildFile($files, 'css');
 
 // add the CSS file to the header
 wp_enqueue_style( 'prefix-style', plugins_url($build_file, __FILE__) );
-*/
+
 
 
 
@@ -41,11 +41,6 @@ $build_file = "/build/static/js/" .getBuildFile($files);
 
 // add the JS file to the footer - true as the last parameter
 wp_enqueue_script( 'plugin-scripts', plugins_url($build_file,__FILE__),array(),'1.0',true);
-
-
-#MEDIA
-#wp_enqueue_media();
-
 
 
 echo '<div id="root"></div>';

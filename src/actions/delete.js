@@ -1,5 +1,8 @@
 import axios from "axios";
 
+//Actions 
+import {getData} from "./get";
+
 export function deleteData(id){
 	return (dispatch)=>{
 
@@ -13,6 +16,9 @@ export function deleteData(id){
 				console.log(obj);
 
 				dispatch({type:"DELETE",payload: obj});
+
+				//Refresh list after a post has been deleted
+				dispatch(getData());
 			});
 
 	}

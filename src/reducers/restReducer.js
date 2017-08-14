@@ -12,11 +12,6 @@ export default (state={
 			};
 			return state;
 
-		/*case 'POST':
-			state = {...state,
-				post: action.payload}
-			return state;
-
 		case 'PUT':
 			state = {...state,
 				put: action.payload}
@@ -25,7 +20,7 @@ export default (state={
 		case 'DELETE':
 			state = {...state,
 				deletecd : action.payload}
-			return state;*/
+			return state;
 
 
 		default:
