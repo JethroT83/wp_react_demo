@@ -11,7 +11,6 @@ import Media from "./Media";
 import '../styles/Style.css';
 
 import {getData} from '../actions/get.js';
-import {putTitle, putContent} from '../actions/put.js';
 import {deleteData} from '../actions/delete.js';
 
 
@@ -26,8 +25,6 @@ class app extends Component {
 		this.handleDelete = this.handleDelete.bind(this);
 		this.displayPosts = this.displayPosts.bind(this);
 	}
-
-
 
 	componentWillMount(){
 		this.state = {
@@ -58,7 +55,7 @@ class app extends Component {
 						<Media media_url={data.media_url}/>
 						<Content ID={data.ID} content={data.post_content}></Content>
 						<div className='col-xs-12'>
-							<button className="btn btn-primary" onClick={this.handleDelete}>Delete Post</button>
+							<button className="btn btn-primary" onClick={()=>this.handleDelete(data.ID)}>Delete Post</button>
 						</div>
 					</div>
 

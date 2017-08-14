@@ -11,7 +11,7 @@ class media extends Component {
 
 	render(){
 
-		if(typeof this.props.media_url != 'null'){
+		if(typeof this.props.media_url !== 'null'){
 			return (
 					<div className="col-xs-12">
 						<img className="media" src={this.props.media_url} alt="This developer failed at life."></img>
@@ -21,8 +21,6 @@ class media extends Component {
 		
 		return
 	}
-
-
 }
 
 export default connect()(media);

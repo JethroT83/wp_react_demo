@@ -11,12 +11,6 @@ export function deleteData(id){
 		axios.get(url)
 			.then((result) =>{
 
-
-				let obj = JSON.parse(result.data.replace('<div id="root"></div>',''));
-				console.log(obj);
-
-				dispatch({type:"DELETE",payload: obj});
-
 				//Refresh list after a post has been deleted
 				dispatch(getData());
 			});

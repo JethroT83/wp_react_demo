@@ -14,5 +14,11 @@
 
 .media {
 	max-height:30em;
-	max-width:30em
+	max-width:30em;
+}
+
+.contentArea {
+	outline:#000000 solid;
+	background-color:#e6f9ff;
+	min-height:10em !important;
 }

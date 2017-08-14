@@ -28,8 +28,6 @@ class title extends Component {
 
 	}
 
-
-
 	handleChangeTitle(evt){
 
 		this.setState({title:evt.target.value});
@@ -39,12 +37,13 @@ class title extends Component {
 	handlePutTitle(id, title){
 
 		if(this.state.titlePut === false){
-			this.setState({titlePut:true});
+			this.setState({titlePut:true,
+							title:this.props.title});
 		}else{
-			this.setState({titlePut:false});
+			this.props.dispatch(putTitle(id, this.state.title));
+			this.setState({titlePut:false,
+							title:this.props.title});
 		}
-
-		this.props.dispatch(putTitle(id, this.state.title));
 	}
 
 
@@ -65,7 +64,7 @@ class title extends Component {
 		}else{
 			return (
 					<div className="col-xs-12 title" onClick={() => this.handlePutTitle(this.props.ID,this.props.title)}>
-						<h2>{this.state.title}</h2>
+						<h2>{this.props.title}</h2>
 					</div>
 				)
 		}
