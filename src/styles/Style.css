@@ -1,0 +1,18 @@
+.getButton{
+	z-index:-1;
+}
+
+
+.outterBorder {
+	outline:#000000 solid;
+}
+
+.title {
+	outline:#000000 solid;
+	background-color: #fff5cc;
+}
+
+.media {
+	max-height:30em;
+	max-width:30em
+}

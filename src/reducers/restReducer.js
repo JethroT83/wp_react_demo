@@ -1,16 +1,18 @@
-import DefaultBackground from '../assets/default.jpg';
 
-export default (state={}, action) => {
+
+export default (state={
+	posts:[]
+}, action) => {
 
 	switch(action.type){
 
 		case 'GET':
 			state ={...state,
-				get: action.payload
+				posts: action.payload
 			};
 			return state;
 
-		case 'POST':
+		/*case 'POST':
 			state = {...state,
 				post: action.payload}
 			return state;
@@ -22,8 +24,8 @@ export default (state={}, action) => {
 
 		case 'DELETE':
 			state = {...state,
-				delete: action.payload}
-			return state;
+				deletecd : action.payload}
+			return state;*/
 
 
 		default:
