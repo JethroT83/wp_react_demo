@@ -3,7 +3,7 @@ import axios from "axios";
 export function getData(){
 	return (dispatch)=>{
 
-		let url = "/headMotor/wp-content/plugins/wp_react_demo/get.php";
+		let url = "/wp-content/plugins/wp_react_demo/get.php";
 
 		axios.get(url)
 			.then((result) =>{
